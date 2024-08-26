@@ -1,0 +1,123 @@
+.user-info-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px #4c00b4,
+                -20px -20px 60px #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .user-info-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .user-info-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .membership-info, .password-change {
+    flex: 1;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #ddd,
+                -5px -5px 15px #fff;
+  }
+  
+  .membership-info h3, .password-change h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #4c00b4;
+  }
+  
+  .info-item {
+    margin-bottom: 10px;
+  }
+  
+  .info-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .info-item input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .info-item input:focus {
+    border-color:#4c00b4;
+    box-shadow: 0 0 8px rgba(0, 255, 68, 0.25);
+  }
+  
+  button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4c00b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4c00b4;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  .back-button {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #6c757d;
+  }
+  
+  .back-button:hover {
+    background-color: #5a6268;
+  }
+
+  .password-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-container input {
+    flex: 1;
+    padding-right: 30px; /* Add some padding to avoid overlap with the icon */
+  }
+  
+  .password-container svg {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .message-container {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 0px;
+    color: red;
+    font-size: large;
+}
+  

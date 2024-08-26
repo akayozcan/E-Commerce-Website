@@ -1,0 +1,143 @@
+.main-orderlist-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.list2 {
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+
+.list2 .order-p2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #425365; /* Dark blue-gray color */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #A1BE95; /* Light green color */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.list-table2 {
+  width: 100%;
+}
+
+.list-table-format-orders {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #cacaca;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list-table-format-orders.title {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.list-table-format-orders img {
+  width: 50px;
+}
+
+.order-list-button {
+  margin-left: 22px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #A1BE95;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.order-list-button:hover {
+  background-color: #8DA584;
+}
+
+.product-details-table {
+  width: 60%;
+  margin: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.product-details-header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  background-color: #e8e8e8;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-detail-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-detail-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.product-detail-row p {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .list-table-format-orders {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-details-header, .product-detail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-row img {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .list-table-format-orders {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+  }
+
+  .list-table-format-orders.title {
+    display: none;
+  }
+
+  .order-list-button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container-register {
+    height: 100vh;
+    background: linear-gradient(#2A00B7, #42006C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-register {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px; /* Adjusted margin */
+    margin-bottom: 200px;
+    width: 480px;
+    background-color: #fff;
+    padding-bottom: 0px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 20px; /* Adjusted margin */
+}
+
+.text-register {
+    color: #3c009d;
+    font-size: 45px; /* Adjusted font size */
+    font-weight: 700;
+}
+
+.underline-register {
+    width: 61px; /* Adjusted width */
+    height: 7px;
+    background-color: #3c009d;
+    border-radius: 9px;
+}
+
+.inputs-register {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjusted gap */
+    margin-top: 30px; /* Adjusted margin */
+}
+
+.input-register {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 380px;
+    height: 65px; /* Adjusted height */
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input-register img {
+    margin: 0px 30px; /* Adjusted margin */
+}
+
+.input-register input {
+    width: 400px;
+    height: 50px; /* Adjusted height */
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #797979;
+    font-size: 19px; /* Adjusted font size */
+}
+.submit-container-register {
+    display: flex;
+    gap: 20px; /* Adjusted gap */
+    margin: 30px auto;
+    margin-top: 30px; /* Adjusted margin */
+    margin-bottom: 60px;
+}
+
+.submit-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Adjusted width */
+    height: 55px; /* Adjusted height */
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px; /* Adjusted border radius */
+    font-size: 19px; /* Adjusted font size */
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.gray-register {
+    background: #EAEAEA;
+    color: #676767;
+}
+
+.message-container-singup {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 50px;
+    color: red;
+    font-size: large;
+    margin-left: 20px;
+}
+
+.error-message-register {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px; /* Space between the input and the error message */
+    margin-left: 60px; /* Align with the text input */
+    margin-bottom: -10px; /* Add space before the next input */
+    text-align: left;
+}
+
+
+.input-register {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 380px;
+    height: 65px;
+    background: #eaeaea;
+    border-radius: 6px;
+    position: relative; /* Ensure the error message aligns properly */
+}
+
+.input-register input {
+    width: 80%; /* Adjust the width to fit the error message layout */
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #797979;
+    font-size: 19px;
+}
+
+.input-register img {
+    margin-left: 20px;
+    margin-right: 20px;
+}
