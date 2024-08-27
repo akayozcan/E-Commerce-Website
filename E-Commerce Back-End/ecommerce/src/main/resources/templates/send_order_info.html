@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .order-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .order-header h1 {
+            margin: 0;
+        }
+        .order-summary {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total-row {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="order-header">
+        <h1>Order Information</h1>
+        <p class="greeting" th:text="'Hello ' + ${username} + ','"></p>
+        <p>Thank you for your order! Here are the details:</p>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${orderItems}">
+            <td><img th:src="@{'cid:' + ${'image' + item.product.id}}" alt="Product Image" style="max-width: 75px;"></td>
+            <td th:text="${item.product.title}"></td>
+            <td th:text="${item.quantity}"></td>
+            <td th:text="'$' + ${item.price}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <p>Order Number: <span th:text="${orderNumber}"></span></p>
+        <p class="total-row">Total: <span th:text="'$' + ${totalAmount}"></span></p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Order Information</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+<!--        .container {-->
+<!--            max-width: 600px;-->
+<!--            margin: 10px auto;-->
+<!--            padding: 20px;-->
+<!--            background-color: #fff;-->
+<!--            border-radius: 5px;-->
+<!--            box-shadow: 0 0 10px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--        .order-header {-->
+<!--            text-align: center;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--        .order-header h1 {-->
+<!--            margin: 0;-->
+<!--        }-->
+<!--        .order-summary {-->
+<!--            margin-top: 20px;-->
+<!--            padding-top: 20px;-->
+<!--            border-top: 1px solid #ddd;-->
+<!--        }-->
+<!--        .order-item {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            margin-bottom: 15px;-->
+<!--        }-->
+<!--        .order-item img {-->
+<!--            max-width: 50px;-->
+<!--            margin-right: 10px;-->
+<!--        }-->
+<!--        .order-item-details {-->
+<!--            flex-grow: 1;-->
+<!--        }-->
+<!--        .order-item-details p {-->
+<!--            margin: 0;-->
+<!--        }-->
+<!--        .order-item-price {-->
+<!--            text-align: right;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <div class="order-header">-->
+<!--        <h1>Order Information</h1>-->
+<!--        <p class="greeting" th:text="'Hello ' + ${username} + ','"></p>-->
+<!--        <p>Thank you for your order! Here are the details:</p>-->
+<!--    </div>-->
+<!--    <div th:each="item : ${orderItems}" class="order-item">-->
+<!--        <img th:src="${item.product.imageUrl}" alt="Product Image">-->
+<!--        <div class="order-item-details">-->
+<!--            <p th:text="${item.product.title}"></p>-->
+<!--            <p th:text="'Quantity: ' + ${item.quantity}"></p>-->
+<!--        </div>-->
+<!--        <div class="order-item-price">-->
+<!--            <p th:text="'$' + ${item.price}"></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="order-summary">-->
+<!--        <h3>Order Summary</h3>-->
+<!--        <p>Order Number: <span th:text="${orderNumber}"></span></p>-->
+<!--        &lt;!&ndash; Add more summary details as needed &ndash;&gt;-->
+<!--        <p>Total: <span th:text="'$' + ${totalAmount}"></span></p>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

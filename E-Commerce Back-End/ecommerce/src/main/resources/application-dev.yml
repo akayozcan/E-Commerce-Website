@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/e-commerce-website-database
+    username: postgres
+    password: 1453
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: akymltya44@gmail.com
+    password: dxsd yeiu fmgn iflo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+#  mail:
+#    host: localhost
+#    port: 1025
+#    username: akay
+#    password: akay
+#    properties:
+#      mail:
+#        smtp:
+#          trust: "*"
+#        auth: true
+#        starttls:
+#          enabled: true
+#        connectiontimeout: 5000
+#        timeout: 3000
+#        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+  file:
+    uploads:
+      photos-output-path: ./uploads
+server:
+  port: 8080
+
+upload:
+  path: C:/path/to/upload/directory
+
